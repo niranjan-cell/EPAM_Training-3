@@ -16,4 +16,8 @@ kubectl delete <resource_type> --all : TO delete all resource of specific type
 kubectl delete all --all : To delete all resource
 kubectl run myapp --image=nginx --dry-run=client : To dry run
 kubectl run myapp --image=nginx --dry-run=client -o yaml > <file_name>.yml : To create resource from command line
+kubectl exec -it <pod_name> -- bash/sh/ash : To go inside the container
+kubectl exec -it <pod_name> -c <container_name> -- bash/sh/ash : To go inside the container if it is a multi container pod
+kubectl get pod -w : To run kubectl get pod command in watch mode
+
 ```
