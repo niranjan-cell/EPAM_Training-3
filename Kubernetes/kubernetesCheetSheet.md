@@ -1,4 +1,4 @@
-``
+```
 kubectl get pod : To list all the pods
 kubectl run <pod_name> --image=<image_name> : To create the pod
 kubectl describe <resource_type> <resource_name> :  To describe any resourse
