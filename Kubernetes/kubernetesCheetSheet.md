@@ -19,5 +19,8 @@ kubectl run myapp --image=nginx --dry-run=client -o yaml > <file_name>.yml : To 
 kubectl exec -it <pod_name> -- bash/sh/ash : To go inside the container
 kubectl exec -it <pod_name> -c <container_name> -- bash/sh/ash : To go inside the container if it is a multi container pod
 kubectl get pod -w : To run kubectl get pod command in watch mode
-
+kubectl edit <resource_type> <resource_name> : To modify the resource
+kubectl label pod <resource_type> <resource_name> key=value : To attach label to any resource
+kubectl label --overwrite <resource_type> <resource_name> key=value : To overwrite the label
+kubectl label <resource_type> <resource_name> key- : To remove the label
 ```
