@@ -30,4 +30,12 @@ kubectl delete rc <rc_name> : To delete the replication controller
 kubectl delete rc <rc_name> --cascade=orphan : To delete replication controller without deleteing the pods
 kubectl edit rc <rc_name> : To modify the replication controller
 kubectl scale rc <rc_name> --replicas=<no_of replicas> : To scale the replication controller
+
+kubectl get rs : To list the replicaset
+kubectl describe rs <rs_name> : To check the details of replicaset
+kubectl delete rs <rs_name> : To delete the replicaset
+kubectl delete rs <rs_name> --cascade=orphan : To delete replicaset without deleteing the pods
+kubectl edit rs <rs_name> : To modify the replicaset
+kubectl scale rs <rs_name> --replicas=<no_of replicas> : To scale the replicaset
+
 ```
