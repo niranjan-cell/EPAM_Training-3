@@ -4,10 +4,15 @@ metadata:
   annotations:
     kubernetes.io/change-cause: "nginx:mainline-perl image updated"
   name: myapp-deploy
-  labels:
-    env: prod
 spec:
-  replicas: 2
+  replicas: 10
+  # strategy:
+  #   rollingUpdate:
+  #     maxSurge: 25%
+  #     maxUnavailable: 25%
+  #   type: RollingUpdate
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       app: myapp
@@ -18,4 +23,4 @@ spec:
     spec:
       containers:
       - name: nginx-container
-        image: nginx:mainline-perl
+        image: nginx:stable
