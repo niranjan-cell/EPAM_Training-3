@@ -38,4 +38,14 @@ kubectl delete rs <rs_name> --cascade=orphan : To delete replicaset without dele
 kubectl edit rs <rs_name> : To modify the replicaset
 kubectl scale rs <rs_name> --replicas=<no_of replicas> : To scale the replicaset
 
+
+kubectl create deploy myapp --image=nginx : To create deployment
+kubectl get deploy :  To list the deployment
+Kubectl describe deploy <deployment_name> : To describe the deployment
+kubectl scale deploy <deployment_name> --replicas=<no_of replicas> : TO scale the replicas
+kubectl rollout history deploy <deployment_name> : To check the revision details of the deployment 
+kubectl rollout status deployment <deployment_name> : To check the rollout status
+kubectl rollout undo deploy myapp-deploy : To rollback to previous revesion
+kubectl rollout undo deploy myapp-deploy --to-revision=<revision_no> : To rollback to specific revesion
+kubectl rollout history deploy myapp-deploy --revision=<revision_no> :  To check the change made in the specific revesion
 ```
