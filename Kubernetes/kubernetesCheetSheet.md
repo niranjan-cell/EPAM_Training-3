@@ -24,8 +24,8 @@ kubectl label pod <resource_type> <resource_name> key=value : To attach label to
 kubectl label --overwrite <resource_type> <resource_name> key=value : To overwrite the label
 kubectl label <resource_type> <resource_name> key- : To remove the label
 
-kubectl get rc : TO list the replication controller
-kubectl describe rv <rc_name> : To check the details of replication controller
+kubectl get rc : To list the replication controller
+kubectl describe rc <rc_name> : To check the details of replication controller
 kubectl delete rc <rc_name> : To delete the replication controller
 kubectl delete rc <rc_name> --cascade=orphan : To delete replication controller without deleteing the pods
 kubectl edit rc <rc_name> : To modify the replication controller
