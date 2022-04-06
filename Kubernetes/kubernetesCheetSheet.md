@@ -20,10 +20,13 @@ kubectl exec -it <pod_name> -- bash/sh/ash : To go inside the container
 kubectl exec -it <pod_name> -c <container_name> -- bash/sh/ash : To go inside the container if it is a multi container pod
 kubectl get pod -w : To run kubectl get pod command in watch mode
 kubectl edit <resource_type> <resource_name> : To modify the resource
-kubectl label pod <resource_type> <resource_name> key=value : To attach label to any resource
+
+# Label
+kubectl label <resource_type> <resource_name> key=value : To attach label to any resource
 kubectl label --overwrite <resource_type> <resource_name> key=value : To overwrite the label
 kubectl label <resource_type> <resource_name> key- : To remove the label
 
+#Replication Controller
 kubectl get rc : To list the replication controller
 kubectl describe rc <rc_name> : To check the details of replication controller
 kubectl delete rc <rc_name> : To delete the replication controller
@@ -31,6 +34,7 @@ kubectl delete rc <rc_name> --cascade=orphan : To delete replication controller 
 kubectl edit rc <rc_name> : To modify the replication controller
 kubectl scale rc <rc_name> --replicas=<no_of replicas> : To scale the replication controller
 
+# ReplicaSet
 kubectl get rs : To list the replicaset
 kubectl describe rs <rs_name> : To check the details of replicaset
 kubectl delete rs <rs_name> : To delete the replicaset
@@ -38,7 +42,7 @@ kubectl delete rs <rs_name> --cascade=orphan : To delete replicaset without dele
 kubectl edit rs <rs_name> : To modify the replicaset
 kubectl scale rs <rs_name> --replicas=<no_of replicas> : To scale the replicaset
 
-
+# Deployment
 kubectl create deploy myapp --image=nginx : To create deployment
 kubectl get deploy :  To list the deployment
 Kubectl describe deploy <deployment_name> : To describe the deployment
@@ -48,4 +52,5 @@ kubectl rollout status deployment <deployment_name> : To check the rollout statu
 kubectl rollout undo deploy myapp-deploy : To rollback to previous revesion
 kubectl rollout undo deploy myapp-deploy --to-revision=<revision_no> : To rollback to specific revesion
 kubectl rollout history deploy myapp-deploy --revision=<revision_no> :  To check the change made in the specific revesion
+
 ```
