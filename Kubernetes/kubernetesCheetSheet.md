@@ -53,4 +53,11 @@ kubectl rollout undo deploy myapp-deploy : To rollback to previous revesion
 kubectl rollout undo deploy myapp-deploy --to-revision=<revision_no> : To rollback to specific revesion
 kubectl rollout history deploy myapp-deploy --revision=<revision_no> :  To check the change made in the specific revesion
 
+# service
+kubectl expose <deployment/rs/rc/pod> <deployment/rs/rc/pod_name> --type=ClusterIP/NodePort/LoadBalancer --port=<service_port> --target-port=<backend_pod_port> --name=<service_name> : To cerate service in imperative way
+
+# Ingress
+kubectl get ing : To list the ingress 
+kubectl describe ing <ingress_name> : To describe the ingress
+kubectl delete ing <ingress_name> : To delete the ingress
 ```
