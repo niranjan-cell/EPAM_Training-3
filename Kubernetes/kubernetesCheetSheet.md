@@ -65,4 +65,8 @@ kubectl delete ing <ingress_name> : To delete the ingress
 kubectl create ns <namespace_name> : To create the namespace
 kubectl get ns : To list the namespaces
 kubectl config set-context --current --namespace <namespace_name> : To mark some namespace as default
+
+# configmap
+kubectl create cm cm1 --from-literal=key1=value1 --from-literal=key2=value2 : To create configmap
+kubectl create cm cm2 --from-file=<filename> : To create configmap from file
 ```
