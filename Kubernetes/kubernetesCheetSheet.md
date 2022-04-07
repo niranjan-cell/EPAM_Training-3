@@ -62,5 +62,7 @@ kubectl describe ing <ingress_name> : To describe the ingress
 kubectl delete ing <ingress_name> : To delete the ingress
 
 # namespace
+kubectl create ns <namespace_name> : To create the namespace
+kubectl get ns : To list the namespaces
 kubectl config set-context --current --namespace <namespace_name> : To mark some namespace as default
 ```
