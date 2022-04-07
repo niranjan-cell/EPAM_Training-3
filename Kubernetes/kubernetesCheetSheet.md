@@ -60,4 +60,7 @@ kubectl expose <deployment/rs/rc/pod> <deployment/rs/rc/pod_name> --type=Cluster
 kubectl get ing : To list the ingress 
 kubectl describe ing <ingress_name> : To describe the ingress
 kubectl delete ing <ingress_name> : To delete the ingress
+
+# namespace
+kubectl config set-context --current --namespace <namespace_name> : To mark some namespace as default
 ```
