@@ -25,4 +25,19 @@ spec:
       #    key: size
       #    operator: Equal
       #    value: large
+      # tolerations:
+      # -  effect: NoSchedule
+      #    key: size
+      #    operator: Exists
+      # tolerations:
+      # -  effect: "*"
+      #    key: size
+      #    operator: Equal
+      #    value: large
+      # tolerations:
+      # -  effect: "*"
+      #    key: size
+      #    operator: Exists
+          
+
 # kubectl taint node pool-jy7jniun0-c71dh size=large:NoSchedule/PreferNoSchedule/NoExecute
