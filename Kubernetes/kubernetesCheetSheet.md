@@ -73,4 +73,17 @@ kubectl create cm cm2 --from-file=<filename> : To create configmap from file
 # Taints and toleration
 kubectl taint node <node_name> key=value:Effect<NoSchedule/PrefferNoSchedule/NoExecute> : To apply taint to node
 kubectl taint node <node_name> key- : To remove taint from node
+
+Kubectl top node : To monitor the cpu and memory usages of the node
+Kubectl top pod -n <namespace_name> : To monitor the cpu and memory usages of the pod in specific namespace
+
+# Volume
+kubectl get pv : To list the persistent volumes
+kubectl describe pv <pv_name> :  To describe the persistent volume
+kubectl delete pv <pv_name> : To delete the persistent volume
+kubectl get pvc : To list the persistent volume claim
+Kubectl describe pvc <pvc_name> : To describe the pvc
+kubectl delete pvc <pvc_name> : To delete the persistent volume claim
+kubectl get sc : To list the storage class
+kubectl describe sc <storageclass_name> : To describe storage class
 ```
