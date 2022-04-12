@@ -1,6 +1,7 @@
 ##### Documentation Link:
 
 https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
 
 ##### Step 1: Configure Docker
 ```sh
@@ -29,11 +30,6 @@ cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
 deb https://apt.kubernetes.io/ kubernetes-xenial main
 EOF
 apt-get update
-```
-
-##### Video Starts from here
-```sh
-apt-cache madison kubeadm
 apt-get install -qy kubeadm=1.18.0-00 kubelet=1.18.0-00 kubectl=1.18.0-00
 apt-mark hold kubelet kubeadm kubectl
 kubeadm version
@@ -44,6 +40,7 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documen
 ##### Upgrade Steps
 
 ```sh
+apt-cache madison kubeadm
 apt-mark unhold kubelet kubectl
 apt-get update && apt-get install -y kubelet=1.19.1-00 kubectl=1.19.1-00
 apt-mark hold kubelet kubectl

@@ -86,4 +86,8 @@ Kubectl describe pvc <pvc_name> : To describe the pvc
 kubectl delete pvc <pvc_name> : To delete the persistent volume claim
 kubectl get sc : To list the storage class
 kubectl describe sc <storageclass_name> : To describe storage class
+
+kubectl cordon <node_name> : To make node as unschedulable
+kubectl uncordon <node_name> : To make node as schedulable
+kubectl drain <node_name> : To drain the node
 ```
